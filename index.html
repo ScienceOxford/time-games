@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Time Games</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto Condensed:100,300,400,500,700,900" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <a href="https://scienceoxford.com" target="_blank"><img src=".\so_logo.png" alt="Science Oxford Logo" width="400px" height="auto"></a>
+    <h1>CCC - Time Games</h1>
+  </header>
+
+  <div id="intro">
+    <p>Resources for the 'Time Games' Creative Computing Club.</p>
+    <p>This page recaps what <a href="https://bit.ly/Feb20CCC" target="_blank">we discussed as a group</a>.</p>
+    <p>To skip to ideas for your next steps, <a href="#extensions">click here</a>.</p>
+  </div>
+
+  <div id="starter" class="left">
+    <h3>Creating your first program</h3>
+    <p>Open <a href="https://codewith.mu/" target="_blank">the Mu editor</a> on your computer. <strong>If there is code on the screen</strong>, start a New program from the menu.</p>
+    <img src="https://raw.githubusercontent.com/ScienceOxford/cyber-pet/master/images/mu_toolbar_new.png" alt="Mu menu, highlighting 'New'" width="1000px" height="auto">
+    <p>Type these two lines of code into your blank window:</p>
+    <pre>from microbit import *
+display.show(Image.HAPPY)</pre>
+    <br>
+    <p>Plug your micro:bit into the computer, then click Flash:</p>
+    <img src="https://raw.githubusercontent.com/ScienceOxford/cyber-pet/master/images/mu_toolbar_flash.png" alt="Mu menu, highlighting 'Flash'" width="1000px" height="auto">
+    <p>Some code should be running on your micro:bit!</p>
+    <p><strong>If you get a message scrolling across the micro:bit's screen</strong>, this is an error message!</p>
+    <p><strong>Debug</strong> your code, then click Flash again to test your changes.</p>
+    <p>Once your code is working - change it!</p>
+    <p>Instead of <code>HAPPY</code>, can you think of another <code>Image</code> the micro:bit could <code>show</code> on its <code>display</code>?
+    <br>
+  </div>
+
+  <div id="memory" class="left">
+    <h3>How does the game work?</h3>
+    <p>TO BE ADDED</p>
+    <img src=".\images\game-memory.gif" alt="animation showing the game's memory" width="1000px" height="auto">
+  </div>
+
+  <div id="code" class="left">
+    <h3>Testing the game</h3>
+    <p>The code below is a complete game.</p>
+    <ol>
+      <li>Copy and paste it into Mu.</li>
+      <li>Flash it to your micro:bit <strong>without changing anything</strong>.</li>
+      <li>Play the game - does it work how you would expect?</li>
+      <li>Think about what improvements you could make to the game.</li>
+      <li>Make some changes!</li>
+    </ol>
+    <br>
+    <pre>from microbit import *
+import random
+import music
+
+'''
+------------WHAT DOES THE MICROBIT DO?------------
+'''
+sequence = []
+options = ["A", "B"]
+
+def action():
+    global sequence
+    choice = random.choice(options)
+    sequence.append(choice)
+
+    for item in sequence:
+        display.show(item)
+        sleep(500)
+        display.clear()
+        sleep(500)
+
+'''
+------------WHAT SHOULD THE PLAYER DO?------------
+'''
+def reaction():
+    global response, sequence
+    response = []
+    while 0 <= len(response) < len(sequence):
+
+        if button_a.was_pressed():
+            response.append("A")
+        if button_b.was_pressed():
+            response.append("B")
+
+'''
+------------WHAT HAPPENS AT THE END?------------
+'''
+def correct():
+    display.show(Image.YES)
+
+def incorrect():
+    global sequence
+    sequence = []
+    display.show(Image.NO)
+
+'''
+------------THE MAIN GAME CODE------------
+'''
+while True:
+    action()
+    reaction()
+    if sequence == response:
+        correct()
+    else:
+        incorrect()
+    sleep(1000)</pre>
+    <br>
+    <ul>
+      <li>Can you change the image displayed when the player has been successful?</li>
+      <li>Can you change the image displayed when the player has <strong>not</strong> been successful?
+    </ul>
+  </div>
+
+  <div id="explanation" class="left">
+    <h3>How does the game work?</h3>
+    <p>TO BE ADDED</p>
+    <img src=".\images\main-loop.PNG" alt="explanation of the main game loop" width="1000px" height="auto">
+  </div>
+
+  <footer class="links">
+    <a href="https://github.com/ScienceOxford/cyber-pet" target="_blank">View on GitHub</a>
+  </footer>
+
+</body>
+
+</html>
