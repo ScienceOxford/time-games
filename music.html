@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Time Games</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto Condensed:100,300,400,500,700,900" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <a href="https://scienceoxford.com" target="_blank"><img src=".\images\so_logo.png" alt="Science Oxford Logo" width="400px" height="auto"></a>
+    <h1>Add musical notes to your game!</h1>
+  </header>
+
+  <div id="intro" class="left">
+    <p>You can tell the micro:bit to play a musical note instead of, or as well as, showing a letter on its display.</p>
+    <p>Your changes will only effect <strong>what the micro:bit does</strong> in the game, so find this section in the code to edit!</p>
+    <img src=".\images\microbit-functions.png" alt="code section - what the micro:bit does" width="1000px" height="auto">
+    <br>
+  </div>
+
+  <div id="explanation" class="left">
+    <h3>What is happening?</h3>
+    <p>The last chunk of code within this section controls what the micro:bit shows in its display.</p>
+    <p><code>for item in sequence</code> tells the micro:bit to look at everything in its <strong>list</strong> of choices (<code>sequence</code>), and do something with all of them.</p>
+    <p>What it currently does is <code>display.show</code> each option!</p>
+    <br>
+  </div>
+
+  <div id="speaker" class="left">
+    <h3>Adding a speaker!</h3>
+    <p>Collect the following items...</p>
+    <ul>
+      <li>Small buzzer or pair of headphones</li>
+      <li>Two crocodile clips</li>
+      <li>Laminated sheet with wiring instructions</li>
+    </ul>
+    <br>
+  </div>
+
+  <div id="music" class="left">
+    <h3>How should you add the music code?</h3>
+    <p>The current options the micro:bit can choose from are the letters <code>A</code> and <code>B</code>.</p>
+    <p>Those letters can be shown on the display, but are also both musical notes.</p>
+    <p>Look carefully at how the <code>display.show</code> line of code is structured.</p>
+    <p>To play musical notes, you can use the following code:</p>
+    <pre>music.play(item)</pre>
+    <br>
+    <p>Try to put this new code in the correct place - do you want it to play <strong>instead</strong> of showing the letter, or to do both?</p>
+    <br>
+  </div>
+
+  <div id="extensions" class="left">
+    <h3>Expand it!</h3>
+    <p>How about adding extra options, so the micro:bit can play more than two notes?</p>
+    <p><a href="options.html">Click here</a> for some help!</p>
+  </div>
+
+  <footer class="links bg_pink">
+    <a href="index.html">Go Back</a>
+  </footer>
+
+  <footer class="links">
+    <a href="https://github.com/ScienceOxford/time-games" target="_blank">View on GitHub</a>
+  </footer>
+
+</body>
+
+</html>

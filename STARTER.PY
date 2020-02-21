@@ -1,5 +1,6 @@
 from microbit import *
 import random
+import music
 
 '''
 ------------WHAT DOES THE MICROBIT DO?------------
@@ -11,7 +12,7 @@ def action():
     global sequence
     choice = random.choice(options)
     sequence.append(choice)
-    
+
     for item in sequence:
         display.show(item)
         sleep(500)
@@ -25,7 +26,7 @@ def reaction():
     global response, sequence
     response = []
     while 0 <= len(response) < len(sequence):
-        
+
         if button_a.was_pressed():
             response.append("A")
         if button_b.was_pressed():
@@ -62,5 +63,5 @@ while True:
     # edit ending - want the game to end? break + end game sequence; want to keep score? variable;
     # edit micro:bit - sounds instead of letters? speaker + import music/speech; extra responses? edit options;
         # get quicker? variable + edit sleep time;
-    # edit player - gestures instead of buttons? accelerometer; extra responses? add to if statement; 
+    # edit player - gestures instead of buttons? accelerometer; extra responses? add to if statement;
         # add joystick for extra buttons? add joystick functions;

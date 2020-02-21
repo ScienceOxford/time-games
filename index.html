@@ -18,6 +18,7 @@
     <p>Resources for the 'Time Games' Creative Computing Club.</p>
     <p>This page recaps what <a href="https://bit.ly/Feb20CCC" target="_blank">we discussed as a group</a>.</p>
     <p>To skip to ideas for your next steps, <a href="#extensions">click here</a>.</p>
+    <br>
   </div>
 
   <div id="starter" class="left">
@@ -36,12 +37,23 @@ display.show(Image.HAPPY)</pre>
     <p>Once your code is working - change it!</p>
     <p>Instead of <code>HAPPY</code>, can you think of another <code>Image</code> the micro:bit could <code>show</code> on its <code>display</code>?
     <br>
+    <br>
   </div>
 
   <div id="memory" class="left">
     <h3>How does the game work?</h3>
-    <p>TO BE ADDED</p>
+    <ol>
+      <li>The micro:bit randomly chooses one of its options.</li>
+      <li>It stores this choice in a <strong>list</strong>, so it can keep track of all of its choices.</li>
+      <li>The player chooses from their options.</li>
+      <li>The micro:bit stores the players choice in <strong>another list</strong>, so it can keep track of all their choices.</li>
+      <li>When the player has chosen the same number of things as the micro:bit has, the two lists are compared.</li>
+      <li>If the two lists are the same, the micro:bit knows that the player was correct!</li>
+      <li>If the two lists are <strong>not</strong> the same, it knows that the player got it wrong.</li>
+      <br>
     <img src=".\images\game-memory.gif" alt="animation showing the game's memory" width="1000px" height="auto">
+    <br>
+    <br>
   </div>
 
   <div id="code" class="left">
@@ -116,25 +128,52 @@ while True:
       <li>Can you change the image displayed when the player has been successful?</li>
       <li>Can you change the image displayed when the player has <strong>not</strong> been successful?
     </ul>
+    <br>
   </div>
 
   <div id="explanation" class="left">
     <h3>How does the game work?</h3>
-    <p>TO BE ADDED</p>
-    <img src=".\images\main-loop.PNG" alt="explanation of the main game loop" width="1000px" height="auto">
+    <p>The last section of the code is where all the good stuff happens - inside the main <strong>loop</strong>.</p>
+  <img src=".\images\main-loop.PNG" alt="explanation of the main game loop" width="1000px" height="auto">
+    <ol>
+      <li>The micro:bit creates a random sequence</li>
+      <li>The micro:bit lets the player respond</li>
+      <li>If the player's response is the same as the micro:bit's sequence...</li>
+      <li>The micro:bit knows the player has done it correctly.</li>
+      <li>If the player's reponse is <strong>not</strong> the same as the micro:bit's sequence...</li>
+      <li>The micro:bit knows the player has done it incorrectly</li>
+      <li>The micro:bit pauses for a second...</li>
+      <li>Then starts again, and takes another action!</li>
+    </ol>
+    <br>
+    <p>The things that happen when the micro:bit takes a turn, and how it understands inputs from the player, are defined by the <strong>functions</strong> further up the code.</p>
+    <p>Each important section is labelled with a comment, like this:</p>
+    <pre>'''
+------------WHAT DOES THE MICROBIT DO?------------
+'''</pre>
+    <br>
   </div>
 
   <div id="extensions" class="left">
     <h3>What next?</h3>
-    <p>TO BE ADDED</p>
+    <p>When deciding what to add to, or change, in the code, think careful about where your changes need to happen.</p>
+    <ul>
+      <li>Are you changing the micro:bit's action?</li>
+      <li>Are you changing what the player has to do?</li>
+      <li>Do you need to change both of these things to make the game work?</li>
+    </ul>
+    <p>The links below give you some ideas and help to improve your game.</p>
+    <p>Use the print-outs of the code around the room to help you - <strong>think about where your changes need to happen</strong>!</p>
+    <br>
+    <p>Do you want to...</p>
   </div>
 
   <nav class="links bg_green">
-    <a href="" target="_blank">add more options?</a>
-    <a href="" target="_blank">musical notes instead of pictures?</a>
-    <a href="" target="_blank">keep track of the player's score?</a>
     <a href="" target="_blank">add an end-game sequence?</a>
-    <a href="" target="_blank">get faster the longer you play?</a>
+    <a href="" target="_blank">use musical notes instead of pictures?</a>
+    <a href="" target="_blank">add more options?</a>
+    <a href="" target="_blank">keep track of the player's score?</a>
+    <a href="" target="_blank">make it harder the longer it is played?</a>
   </nav>
 
   <footer class="links">

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Time Games</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto Condensed:100,300,400,500,700,900" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <a href="https://scienceoxford.com" target="_blank"><img src=".\images\so_logo.png" alt="Science Oxford Logo" width="400px" height="auto"></a>
+    <h1>Add an end-game sequence!</h1>
+  </header>
+
+  <div id="intro" class="left">
+    <p>Currently, even if your player looses the game, they can keep playing.</p>
+    <p>This is because all of the code happens within a <code>while True</code> (forever) loop.</p>
+    <p>You can edit the main game code to escape the loop, so find this section of your code.</p>
+    <img src=".\images\main-loop-basic.png" alt="code section - main loop" width="1000px" height="auto">
+    <br>
+    <br>
+  </div>
+
+  <div id="break" class="left">
+    <h3>Breaking out of the loop!</h3>
+    <p>One way of stopping the game is to <code>break</code> out of the loop, and then run some extra code.</p>
+    <p>In your main game code, there is code to tell when the player is incorrect:</p>
+    <pre>    else:
+        incorrect()</pre>
+        <br>
+    <p>Add a new line underneath:</p>
+    <pre>        break</pre>
+    <br>
+    <p>Now, when your player loses the game, the game stops running!</p>
+    <br>
+  </div>
+
+  <div id="end-sequence" class="left">
+    <h3>What happens next?</h3>
+    <p>How do you want to let the player know the game is over?</p>
+    <p>Add some new code right at the bottom of the program, below your main loop, and <strong>not inside it</strong>.</p>
+    <p>Your new code should sit all the way to the left, and not be indented at all - this means it will happen outside the loop!</p>
+    <p>Some ideas to start you off...</p>
+    <ul>
+      <li><code>display.scroll("GAME OVER")</code></li>
+      <li><code>display.show(Image.SKULL)</code></li>
+      <li><code>music.play(music.POWER_DOWN)</code></li>
+    </ul>
+    <p><strong>To hear the music, you will need to add a speaker first!</strong></p>
+    <br>
+  </div>
+
+  <div id="speaker" class="left">
+    <h3>Adding a speaker!</h3>
+    <p>Collect the following items...</p>
+    <ul>
+      <li>Small buzzer or pair of headphones</li>
+      <li>Two crocodile clips</li>
+      <li>Laminated sheet with wiring instructions</li>
+    </ul>
+    <br>
+  </div>
+
+  <div id="extensions" class="left">
+    <h3>Expand it!</h3>
+    <p>How about making the micro:bit play musical notes as the sequence, instead of showing you the letters?</p>
+    <p><a href="music.html">Click here</a> for some help!</p>
+  </div>
+
+  <footer class="links bg_pink">
+    <a href="index.html">Go Back</a>
+  </footer>
+
+  <footer class="links">
+    <a href="https://github.com/ScienceOxford/time-games" target="_blank">View on GitHub</a>
+  </footer>
+
+</body>
+
+</html>

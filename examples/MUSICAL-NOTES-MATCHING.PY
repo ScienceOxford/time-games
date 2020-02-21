@@ -12,9 +12,10 @@ def action():
     global sequence
     choice = random.choice(options)
     sequence.append(choice)
-    display.clear()
     for item in sequence:
         music.play(item)
+        sleep(500)
+        display.clear()
         sleep(500)
 
 '''
@@ -24,7 +25,7 @@ def reaction():
     global response, sequence
     response = []
     while 0 <= len(response) < len(sequence):
-        
+
         if button_a.was_pressed():
             response.append("A")
         if button_b.was_pressed():

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Time Games</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto Condensed:100,300,400,500,700,900" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <a href="https://scienceoxford.com" target="_blank"><img src=".\images\so_logo.png" alt="Science Oxford Logo" width="400px" height="auto"></a>
+    <h1>Add extra options to your game!</h1>
+  </header>
+
+  <div id="intro" class="left">
+    <p>If you want more choices in your game, there are two sections of code to edit.</p>
+    <p>Your changes will effect <strong>what the micro:bit does</strong> in the game, and also <strong>what the player has to do</strong>!</p>
+    <br>
+  </div>
+
+  <div id="microbit" class="left">
+    <h3>What does the micro:bit do?</h3>
+    <p>Find the section in your code that controls what the micro:bit does.</p>
+    <img src=".\images\microbit-functions.png" alt="code section - what the micro:bit does" width="1000px" height="auto">
+    <p>Near the top of this chunk of code, is the <strong>list</strong> of options the micro:bit has to choose from:</p>
+    <pre>options = ["A", "B"]</pre>
+    <br>
+    <p>Make this list longer, by adding extra things inside the brackets.</p>
+    <p><strong>If you want to use musical notes, make sure you only add letters of real musical notes to the options!</strong></p>
+    <br>
+  </div>
+
+  <div id="player" class="left">
+    <h3>What should the player do?</h3>
+    <p>The micro:bit will now show more options, so the player needs a way to repond to them!</p>
+    <p>Find the section in your code that controls what the player should do.</p>
+    <img src=".\images\player-functions.png" alt="code section - what the player should do" width="1000px" height="auto">
+    <p>The last chunk of code within this section controls how the player adds responses during the game.</p>
+    <p><code>response.append("A")</code> means that <code>A</code> is added to the <strong>list</strong> of player responses.</p>
+    <p><code>if button_a.was_pressed()</code>, in this code, means that <code>A</code> will only be added to the list, <strong>if</strong> the player presses <strong>button A</strong> on the micro:bit.</p>
+    <br>
+    <p>You will need to expand this code for your extra options.</p>
+    <p>There are only two buttons on the micro:bit, which means you will have to use other features to make your game work!</p>
+    <p>Below is an example showing <strong>one more option</strong> added to the code - to add <code>C</code> to the list if the player shakes the micro:bit!</p>
+    <br>
+    <pre>        if button_a.was_pressed():
+            response.append("A")
+        if button_a.was_pressed():
+            response.append("B")
+        if accelerometer.was_gesture("shake"):
+            response.append("C")</pre>
+    <br>
+    <p>There are lots of different accelerometer gestures you can use here!</p>
+    <ul>
+      <li><code>'face up'</code></li>
+      <li><code>'face down'</code></li>
+      <li><code>'shake'</code></li>
+      <li><code>'up'</code></li>
+      <li><code>'down'</code></li>
+      <li><code>'left'</code></li>
+      <li><code>'right'</code></li>
+    </ul>
+  </div>
+
+  <div id="extensions" class="left">
+    <h3>Expand it!</h3>
+    <p>How about adding an end-game sequence, to do something cool after your player loses the game?</p>
+    <p><a href="ending.html">Click here</a> for some help!</p>
+  </div>
+
+  <footer class="links bg_pink">
+    <a href="index.html">Go Back</a>
+  </footer>
+
+  <footer class="links">
+    <a href="https://github.com/ScienceOxford/time-games" target="_blank">View on GitHub</a>
+  </footer>
+
+</body>
+
+</html>
