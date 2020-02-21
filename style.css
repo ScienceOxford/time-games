@@ -38,7 +38,14 @@ p {
   margin-bottom: 10px;
 }
 
-pre, code {
+pre {
+  font-family: "Roboto Mono";
+  border: thin dashed darkgrey;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+code {
   font-family: "Roboto Mono";
 }
 
