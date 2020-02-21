@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Time Games</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <a href="https://scienceoxford.com" target="_blank"><img src=".\images\so_logo.png" alt="Science Oxford Logo" width="400px" height="auto"></a>
+    <h1>Keep track of the score!</h1>
+  </header>
+
+  <div id="intro" class="left">
+    <p>To keep track of the score, you need to know whether the play has won or lost.</p>
+    <p>Find the section of code that controls what is displayed at the end of a loop - the correct / incorrect functions.</p>
+    <img src=".\images\end-functions.PNG" alt="code section - main loop" width="1000px" height="auto">
+    <br>
+    <br>
+  </div>
+
+  <div id="adding" class="left">
+    <h3>Increasing the score</h3>
+    <p>At the top of this section, add a new line just above <code> def correct() </code>.</p>
+    <p>Here, create a <strong>variable</strong>, which will keep track of what the score is, by adding the following line:</p>
+    <pre>score = 0</pre>
+    <br>
+    <p>Now, look at the <code> correct </code> function - inside here is where you say what happens when the player is right.</p>
+    <p>Add into this block of code the following code, to increase the score by 1:</p>
+    <pre>    global score
+    score += 1</pre>
+    <br>
+    <p>The score will now increase whenever the player is correct.</p>
+    <p><code>global</code> is needed because variables work differently inside functions! This will tell it to use the score you defined a moment ago.</p>
+    <br>
+  </div>
+
+  <div id="resetting" class="left">
+    <h3>Resetting the score</h3>
+    <p>If the player is <strong>incorrect</strong>, instead of increasing the score, you can set it back to zero again!</p>
+    <p>Add the below code into <code> incorrect </code> function:</p>
+    <pre>    global score
+    score = 0</pre>
+    <br>
+  </div>
+
+  <div id="display" class="left">
+    <h3>Displaying the score</h3>
+    <p>Think about <strong>when</strong> you want to display the score.</p>
+    <p>when the <code> incorrect </code> function runs, the score will be set to zero - so think carefully about the order that things happen in!</p>
+    <p>To show the score on the micro:bit's display, you can use this code:</p>
+    <pre>display.scroll(score)</pre>
+    <br>
+  </div>
+
+  <div id="extensions" class="left">
+    <h3>Expand it!</h3>
+    <p>How about adding extra options, so the game gets harder for your player?</p>
+    <p><a href="options.html">Click here</a> for some help!</p>
+  </div>
+
+  <footer class="links bg_pink">
+    <a href="index.html">Go Back</a>
+  </footer>
+
+  <footer class="links">
+    <a href="https://github.com/ScienceOxford/time-games" target="_blank">View on GitHub</a>
+  </footer>
+
+</body>
+
+</html>
