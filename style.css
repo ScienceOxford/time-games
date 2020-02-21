@@ -38,7 +38,7 @@ p {
   margin-bottom: 10px;
 }
 
-pre {
+pre, code {
   font-family: "Roboto Mono";
 }
 
